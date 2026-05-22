@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const counterSlice = createSlice({
     name: "counter",
     initialState:{
-        value: 0
+        value: 0,
+        users:[]
     },
     reducers: {
         increment: (v) => {
@@ -11,6 +12,9 @@ const counterSlice = createSlice({
         },
         plus: (v,action) => {
             v.value += action.payload
+        },
+        addUser: (v,action) => {
+            console.log(action)
         }
     }
 })
