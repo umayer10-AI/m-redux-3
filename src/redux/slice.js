@@ -19,9 +19,13 @@ const counterSlice = createSlice({
                 name: action.payload
             }
             v.users.push(data)
+        },
+        removeUser: (v,action) => {
+            const data = v.users.filter(v => v.id !== action.payload)
+            v.users = data
         }
     }
 })
 
-export const { increment,plus,addUser } = counterSlice.actions
+export const { increment,plus,addUser,removeUser } = counterSlice.actions
 export default counterSlice.reducer

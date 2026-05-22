@@ -1,5 +1,5 @@
 "use client"
-import { addUser } from '@/redux/slice';
+import { addUser, removeUser } from '@/redux/slice';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -26,7 +26,7 @@ const Display = () => {
             <div className='flex flex-col gap-3'>
                 {
                     data?.map(v => (
-                        <h2 key={v.id}>{v.name} <button className='py-0 px-3 rounded-2xl bg-pink-600 text-white'>Delete</button></h2>
+                        <h2 key={v.id}>{v.name} <button onClick={() => dispatch(removeUser(v.id))} className='py-0 px-3 rounded-2xl bg-pink-600 text-white'>Delete</button></h2>
                     ))
                 }
             </div>
