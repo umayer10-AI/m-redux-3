@@ -1,5 +1,6 @@
 import Counter from '@/component/Counter';
 import Display from '@/component/Display';
+import Naming from '@/component/Naming';
 import React from 'react';
 
 const page = () => {
@@ -7,6 +8,7 @@ const page = () => {
     <div>
       <Counter></Counter>
       <Display></Display>
+      <Naming></Naming>
     </div>
   );
 };
