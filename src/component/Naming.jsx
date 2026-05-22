@@ -7,7 +7,6 @@ const Naming = () => {
 
     const n = useSelector(v => v.nameSet.ss)
     console.log(n)
-    
     const d = useDispatch()
 
     return (
