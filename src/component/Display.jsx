@@ -1,12 +1,16 @@
 "use client"
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Display = () => {
 
     const [s,setS] = useState('')
+    const data = useSelector(v => v.counter.users)
+    const dispatch = useDispatch()
+    console.log(data)
 
     const a = () => {
-        console.log(s)
+        dispatch
     }
 
     return (
