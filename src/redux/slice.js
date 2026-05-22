@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice, current, nanoid } from "@reduxjs/toolkit";
 
 const counterSlice = createSlice({
     name: "counter",
@@ -19,6 +19,7 @@ const counterSlice = createSlice({
                 name: action.payload
             }
             v.users.push(data)
+            console.log(current(v.users))
         },
         removeUser: (v,action) => {
             const data = v.users.filter(v => v.id !== action.payload)
